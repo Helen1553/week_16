@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="header_text">
+            Fill out the form below
+        </h1>
+    </header>
+    <main class="main">
+        <div class="main_container">
+            <h2 class="main-container_text">
+                Registration Form
+            </h2>
+
+            <form id="registrationForm" class="main-container_form">
+
+                <div class="main-container_form-group">
+                    <label for="name">
+                        Full Name:
+                    </label>
+                    <input type="text" id="name" placeholder="Enter your Name here" required pattern="^[A-Za-zА-Яа-яЁёs]{2,20}+$">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label for="email">
+                        Email:
+                    </label>
+                    <input type="email" id="email" placeholder="Enter your Email here" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label for="age">
+                        Date of Birth:
+                    </label>
+                    <input type="number" id="age" placeholder="Enter your Age here" required>
+                    <span class="error-message" id="ageError"></span>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label>
+                        Sex:
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                            Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                            Male
+                    </label>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label for="profession">
+                        Occupation:
+                    </label>
+                    <select id="profession" required>
+                        <option value="" disabled selected>
+                            Choose your profession:
+                        </option>
+                        <option value="doctor">
+                            Doctor
+                        </option>
+                        <option value="programmer">
+                            Programmer
+                        </option>
+                        <option value="teacher">
+                            Teacher
+                        </option>
+                        <option value="designer">
+                            Designer
+                        </option>
+                        <option value="engineer">
+                            Engineer
+                        </option>
+                        <option value="seller">
+                            Seller
+                        </option>
+                        <option value="other">
+                            The other one
+                        </option>
+                        <option value="student">
+                            I'm a student
+                        </option>
+                    </select>
+                    <span class="error-message" id="professionError"></span>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input type="password" id="password" placeholder="Enter your Password here" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*d).{8,}+$">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+    
+                <div class="main-container_form-group">
+                    <label><input type="checkbox" id="consent" required>
+                        I agree with the data processing
+                    </label>
+                    <span class="error-message" id="consentError"></span>
+                </div>
+    
+                <button type="submit" id="submitButton" class="btn" disabled>
+                    Send
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <h3 class="footer_text">
+            All rights reserved, 2025
+        </h3>
+    </footer>
+
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
