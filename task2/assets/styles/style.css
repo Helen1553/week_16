@@ -1,0 +1,81 @@
+.body {
+    display: grid;
+    grid-template: 7% 88% 5%/5% 90% 5%;
+
+    height: 155vh;
+    width: 100vw;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+
+    .header{
+        grid-area: 1/2/3/3;
+        
+        .header_text{
+            text-align: center;
+        }
+    }
+
+    .main{
+        grid-area: 2/2/3/3;
+
+        .main_section{
+            height: 100%;
+            width: 100%;
+
+            .main-section_form {
+                height: 100%;
+                width: 100%;
+
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                .field {
+                    margin-bottom: 2rem;
+                    padding: 1rem 1rem 0 1rem;
+    
+                    .label{
+                        display: block;
+    
+                        margin-bottom: 0.5rem;
+    
+                        font-weight: bold;
+                    }
+
+                    input{
+                        width: 99%;
+                    }
+                }
+                .result {
+                    margin-top: 0.5rem;
+                
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .footer{
+        grid-area: 3/2/4/3;
+        
+        .footer_text{
+            text-align: center;
+            font-size: small;
+        };
+    }
+}
+
+select, input[type="number"], input[type="radio"], input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: rgb(138, 26, 26);
+    text-align: center;
+}
